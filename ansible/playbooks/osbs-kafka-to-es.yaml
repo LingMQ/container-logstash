@@ -1,0 +1,12 @@
+---
+- name: Deploy Logstash
+  hosts: nodes
+  roles:
+  - role: logstash-deployment-openshift
+#    debug: "true"
+    logstash_project: dh-stage
+    logstash_name: osbs
+    configs_dir: "{{ inventory_dir }}/../../osbs-kafka-to-es/"
+    kubeconfig: /Users/asherkho-osx/.kube/config
+    index_shipshift: fedmsg-prod
+    production_elasticsearch: "http://elasticsearch.perf.lab.eng.bos.redhat.com:80"
