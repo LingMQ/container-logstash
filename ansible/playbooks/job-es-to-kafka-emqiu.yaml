@@ -1,0 +1,9 @@
+---
+- name: Deploy Logstash
+  hosts: nodes
+  roles:
+  - role: logstash-job-openshift
+    configs_dir: "{{ inventory_dir }}/../../logstash-configs/"
+    logstash_project: phoebe-analytics-scripts-test
+    kubeconfig: /home/emqiu/.kube/config
+    job_name: job-1
