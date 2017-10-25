@@ -14,3 +14,8 @@ job_name: logstash-job-1
 configs_dir: "{{ role_path }}/files/"
 # Define certs_dir to add certificates to the job
 # certs_dir: "{{ role_path }}/files/"
+
+
+ci_job_name: Interop-OSP_10-OCP_3.4-MLibVirt-HA-smoke-70e5f-stable-runtest
+date
+time_range_start_at: now-1d/d
