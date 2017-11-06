@@ -6,7 +6,6 @@
     time_range_start_at: now-1d/d
   roles:
   - role: logstash-job-openshift
-    configs_dir: "{{ inventory_dir }}/../../logstash-configs/"
+    configs_dir: "{{ inventory_dir }}/../../logstash-configs-prod/"
     logstash_project: phoebe-analytics-scripts-test
-    kubeconfig: /home/emqiu/.kube/config
     job_name: job-1
